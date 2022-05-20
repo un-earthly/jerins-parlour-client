@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function HomeBanner() {
     return (
-        <>
 
             <div class="hero min-h-screen">
                 <div class="hero-content lg:justify-between flex-col lg:flex-row-reverse">
@@ -18,6 +17,5 @@ export default function HomeBanner() {
                 </div>
             </div>
 
-        </>
     )
 }
