@@ -1,4 +1,4 @@
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Helmet from 'react-helmet'
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
