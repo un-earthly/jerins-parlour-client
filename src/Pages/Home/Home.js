@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import HomeBanner from './HomeBanner'
 import HomeServices from './HomeServices.js'
 import Nav from '../../Shared/Nav'
+import HomeAbout from './HomeAbout';
 
 export default function Home() {
     class Service {
@@ -28,7 +29,7 @@ export default function Home() {
 
             <HomeBanner />
             <HomeServices services={services} />
-            {/* <HomeAbout /> */}
+            <HomeAbout />
         </>
     )
 }
