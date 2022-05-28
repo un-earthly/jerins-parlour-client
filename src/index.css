@@ -34,9 +34,16 @@
     }
 }
 
-.input,
-.textarea {
+input,
+textarea {
     background: white;
     outline: none;
-    padding: 0 12px;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: #00000060 0 0 0 1000px;
+    transition: all 1s;
 }

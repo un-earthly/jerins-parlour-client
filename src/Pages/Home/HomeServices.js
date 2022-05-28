@@ -3,7 +3,7 @@ import Card from '../../Components/Card'
 
 export default function HomeServices({ services }) {
     return (
-        <div class="hero min-h-screen bg-primary py-10">
+        <div className="hero min-h-screen bg-primary py-10">
             <div className="lg:hero-content lg:flex-col space-y-10">
                 <h1 className="text-4xl text-center font-bold">Our Awesome <span className="text-accent">Services</span></h1>
 
