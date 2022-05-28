@@ -1,10 +1,9 @@
 import React from 'react'
 import HomeBanner from './HomeBanner'
 import HomeServices from './HomeServices.js'
-import Nav from '../../Shared/Nav'
 import HomeAbout from './HomeAbout';
 import HomeTesimonial from './HomeTesimonial';
-import Footer from '../../Components/Footer';
+import Footer from '../../Shared/Footer';
 import HomeContact from './HomeContact';
 
 export default function Home() {
@@ -34,11 +33,6 @@ export default function Home() {
             this.rating = rating
         }
     }
-    const services = [
-        new Service('https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Icon/Group%201372.png', 'Anti Age Face Treatment', '199', 'Anti-aging facial treatments are some of the best non-invasive ways to reduce the appearance of fine lines, wrinkles, and minor skin discolorations.'),
-        new Service('https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Icon/Group%201373.png', 'Hair Color & Styleing', '99', 'Hair coloring, or hair dyeing, is the practice of changing the hair color.we provide long lasting color and style for your hair'),
-        new Service('https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Icon/Group%201374.png', 'Anti Age Face Treatment', '299', 'Skin care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. ')
-    ]
     const tesimonials = [
         new Tesimonial('https://randomuser.me/api/portraits/women/61.jpg', 'Nash Patrik', 'CEO', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, dolorum!', '4'),
         new Tesimonial('https://randomuser.me/api/portraits/women/62.jpg', 'Nash Patrik', 'CEO', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, dolorum!', '5'),
@@ -50,17 +44,21 @@ export default function Home() {
         new Tesimonial('https://randomuser.me/api/portraits/women/69.jpg', 'Nash Patrik', 'CEO', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, dolorum!', '3.9'),
         new Tesimonial('https://randomuser.me/api/portraits/women/79.jpg', 'Nash Patrik', 'CEO', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, dolorum!', '5'),
     ]
+    const services = [
+        new Service('https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Icon/Group%201372.png', 'Anti Age Face Treatment', '199', 'Anti-aging facial treatments are some of the best non-invasive ways to reduce the appearance of fine lines, wrinkles, and minor skin discolorations.'),
+        new Service('https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Icon/Group%201373.png', 'Hair Color & Styleing', '99', 'Hair coloring, or hair dyeing, is the practice of changing the hair color.we provide long lasting color and style for your hair'),
+        new Service('https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Icon/Group%201374.png', 'Anti Age Face Treatment', '299', 'Skin care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. ')
+    ]
 
     return (
         <>
-            {/* <Nav /> */}
-
             <HomeBanner />
             <HomeServices services={services} />
             <HomeAbout />
             <HomeTesimonial tesimonials={tesimonials} />
             <HomeContact />
             <Footer />
+
         </>
     )
 }

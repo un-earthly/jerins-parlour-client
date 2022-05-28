@@ -36,9 +36,7 @@ export default function Footer() {
             </div>
             <div class="w-2/3">
                 <span class="text-white font-bold uppercase">About us</span>
-                <p>Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Purus commodo ipsum
-                    duis laoreet maecenas. Feugiat </p>
+                <p>We Provide The Best quality <strong>beauty</strong> solutions in the market.we have qualified beauticians who takes care of customers with most efficient beauty trends and products. </p>
                 <div class="text-2xl space-x-4 flex items-center justify-center">
 
                     <a class="link link-hover"><i className="bi bi-facebook"></i></a>
