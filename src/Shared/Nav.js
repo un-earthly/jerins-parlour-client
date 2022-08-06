@@ -2,12 +2,13 @@ import { signOut } from 'firebase/auth'
 import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link } from 'react-router-dom'
+import Loading from '../Components/Loading'
 import auth from '../firebase.init'
 
 export default function Nav({ children }) {
     const [user, loading] = useAuthState(auth)
     if (loading) {
-        return 'Loading...'
+        return <Loading />
     }
     const navlinks = < >
         <Link to='/' >Home</Link>
@@ -37,19 +38,18 @@ export default function Nav({ children }) {
                 <Link to='/login' className='btn-accent py-3 px-8 rounded-md block' >Login</Link>
         }
     </ >
-
     return (
         <div className="drawer">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
-                <div className="w-full p-4 navbar">
+                <div className="w-full navbar">
                     <div className="flex-none lg:hidden">
                         <label for="my-drawer-3" className="btn btn-square btn-ghost">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         </label>
                     </div>
-                    <Link to="/" className="flex-1 px-2 mx-2"><img src="logo192.png" className='w-1/3 h-1/3 lg:w-32' alt="" /></Link>
-                    <div className="flex-none hidden lg:block">
+                    <Link to="/" className="flex-1 lg:pt-5 lg:px-5"><img src="logo192.png" className='w-1/3 h-1/3 lg:w-32' alt="" /></Link>
+                    <div className="flex-none hidden lg:block pt-5 px-5">
 
                         <ul className="menu menu-horizontal items-center justify-center space-x-5 py-10">
                             {navlinks}

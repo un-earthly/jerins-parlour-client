@@ -3,7 +3,7 @@ import React from 'react'
 export default function HomeBanner() {
     return (
         <div className="hero min-h-screen">
-            <div className="hero-content lg:justify-between lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:justify-between lg:flex-row-reverse">
                 <div className="lg:w-1/2 flex items-center justify-center">
                     <img src="https://raw.githubusercontent.com/ProgrammingHero1/jerins-parlour/main/Image_Icon/Image/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept%201.png" className="w-full lg:w-2/3 rounded-lg" alt='treatment' />
                 </div>

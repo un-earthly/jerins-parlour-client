@@ -3,7 +3,7 @@ import Card from '../../Components/Card'
 
 export default function HomeServices({ services }) {
     return (
-        <div className="hero min-h-screen bg-primary py-10">
+        <div className="hero bg-primary py-10">
             <div className="lg:hero-content lg:flex-col space-y-10">
                 <h1 className="text-4xl text-center font-bold">Our Awesome <span className="text-accent">Services</span></h1>
 
@@ -12,9 +12,8 @@ export default function HomeServices({ services }) {
                         services.map(service => <Card key={service.img} service={service} />)
                     }
                 </div>
-                <div className="flex items-center justify-center">
-                    <button className="btn btn-accent">Explore more</button>
-                </div>
+                <button className="btn block mx-auto btn-accent">Explore more</button>
+
             </div>
         </div >
     )

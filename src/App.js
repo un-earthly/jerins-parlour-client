@@ -15,29 +15,29 @@ function App() {
   useEffect(() => {
 
   }, [])
+
+  //  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.js" 
+
+     
   return (
     <div className="App">
       <Helmet>
         <title>Home - Jarin's Parlour</title>
       </Helmet>
-      <Nav>
+      <Routes>
+        <Route />
+        <Route path='/' element={<Nav><Home /> </Nav>} />
+        <Route path="/contact" element={<Nav> <HomeContact /></Nav>} />
+        <Route path="/team" element={<Nav><Team /></Nav>} />
+        <Route path='/dashboard' element={<Dashboard />}>
+          <Route index element={<MyAppointment />} />
+          <Route path='/dashboard/my-appointment' element={<MyAppointment />} />
+          <Route path='/dashboard/my-bookings' element={<MyBookings />} />
+          <Route path='/dashboard/my-review' element={<MyReview />} />
+        </Route>
+        <Route path='/login' element={<Nav><Login /></Nav>} />
+      </Routes>
 
-        <Routes>
-          <Route />
-          <Route path='/' element={<Home />} />
-          <Route path="/contact" element={<HomeContact />} />
-          <Route path="/team" element={<Team />} />
-          <Route path='/dashboard' element={<Dashboard />}>
-            <Route index element={<MyAppointment />} />
-            <Route path='/dashboard/my-appointment' element={<MyAppointment />} />
-            <Route path='/dashboard/my-bookings' element={<MyBookings />} />
-            <Route path='/dashboard/my-review' element={<MyReview />} />
-          </Route>
-          <Route path='/login' element={<Login />} />
-        </Routes>
-
-
-      </Nav>
     </div>
   );
 }
